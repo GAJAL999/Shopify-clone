@@ -30,3 +30,25 @@ model Session {
   collaborator  Boolean?  @default(false)
   emailVerified Boolean?  @default(false)
 }
+model Product {
+  id        Int     @id @default(autoincrement())
+  shopifyId String  @unique
+  title     String
+  price     Float
+}
+
+model Customer {
+  id         Int     @id @default(autoincrement())
+  shopifyId  String  @unique
+  firstName  String
+  lastName   String
+  email      String
+}
+
+model Order {
+  id            Int     @id @default(autoincrement())
+  shopifyId     String  @unique
+  totalPrice    Float
+  currency      String
+  customerEmail String
+}

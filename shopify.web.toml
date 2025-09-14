@@ -5,3 +5,18 @@ webhooks_path = "/webhooks/app/uninstalled"
 [commands]
 predev = "npx prisma generate"
 dev = "npx prisma migrate deploy && npm exec remix vite:dev"
+
+[[webhooks.subscriptions]]
+topic = "products/create"
+uri   = "/webhooks/products"
+format = "json"
+
+[[webhooks.subscriptions]]
+topic = "customers/create"
+uri   = "/webhooks/customers"
+format = "json"
+
+[[webhooks.subscriptions]]
+topic = "orders/create"
+uri   = "/webhooks/orders"
+format = "json"
