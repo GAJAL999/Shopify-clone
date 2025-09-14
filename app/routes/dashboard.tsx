@@ -1,6 +1,6 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import prisma from "~/utils/db.server";
+import prisma from "../db.server";
 
 export const loader: LoaderFunction = async () => {
   const products = await prisma.product.findMany();
