@@ -8,15 +8,15 @@ dev = "npx prisma migrate deploy && npm exec remix vite:dev"
 
 [[webhooks.subscriptions]]
 topic = "products/create"
-uri   = "/webhooks/products"
+uri   = "https://shopify-clone.vercel.app/webhooks/products"
 format = "json"
 
 [[webhooks.subscriptions]]
 topic = "customers/create"
-uri   = "/webhooks/customers"
+uri   = "https://shopify-clone.vercel.app/webhooks/customers"
 format = "json"
 
 [[webhooks.subscriptions]]
 topic = "orders/create"
-uri   = "/webhooks/orders"
+uri   = "https://shopify-clone.vercel.app/webhooks/orders"
 format = "json"
